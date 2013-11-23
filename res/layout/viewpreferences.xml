@@ -14,24 +14,28 @@
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+    
             tools:ignore="UselessParent" >
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 android:text="Number" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                 android:textStyle="bold"
                 android:text="Type" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
+                 android:textStyle="bold"
                 android:text="Value" />
         </TableRow>
     </TableLayout>
@@ -43,15 +47,20 @@
         android:text="get info from db" />
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
+        android:orientation="vertical" >
+        
+          <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Select the preference you want to remove!" />
         <Spinner
             android:id="@+id/deletespinner1"
             android:layout_width="168dp"
-            android:layout_height="106dp"
+            android:layout_height="wrap_content"
             android:prompt="@string/subscription_to_delete" />
 
     </LinearLayout>

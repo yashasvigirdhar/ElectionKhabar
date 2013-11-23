@@ -160,7 +160,7 @@ public class MyPaper extends Activity {
 		// TODO Auto-generated method stub
 		myname = (TextView) findViewById(R.id.tvParty);
 		myimg = (ImageView) findViewById(R.id.imgParty);
-		myname.setText("My Paper ! aaah");
+		myname.setText("My Paper");
 		editsubs = (Button) findViewById(R.id.bEditSubs);
 		editsubs.setOnClickListener(new OnClickListener() {
 

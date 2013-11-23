@@ -10,8 +10,7 @@
     tools:ignore="DuplicateIds,HardcodedText,SpUsage,InefficientWeight,NestedWeights" >
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
+                android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2.6"
         android:baselineAligned="false"
@@ -37,7 +36,6 @@
     </LinearLayout>
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1.7"
@@ -46,7 +44,6 @@
         android:weightSum="2" >
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -59,7 +56,6 @@
                 android:background="@drawable/style"
                 android:clickable="true"
                 android:gravity="center"
-               
                 android:shadowColor="#006"
                 android:shadowDx="2"
                 android:shadowDy="2"
@@ -72,7 +68,6 @@
         </LinearLayout>
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -118,7 +113,6 @@
     </LinearLayout>
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2.85"
@@ -144,7 +138,6 @@
     </LinearLayout>
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2.85"

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 
 public class Home extends Activity implements OnClickListener, OnTouchListener {
 
-	TextView topnews, parties, politicians, mypaper, newspapers,discussions;
+	TextView topnews, parties, politicians, mypaper, newspapers, discussions;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 		politicians = (TextView) findViewById(R.id.tvPoliticians);
 		mypaper = (TextView) findViewById(R.id.tvMyPaper);
 		newspapers = (TextView) findViewById(R.id.tvPapers);
-		discussions=(TextView) findViewById(R.id.tvDiscussions);
+		discussions = (TextView) findViewById(R.id.tvDiscussions);
 
 		// parties.setOnClickListener(this);
 		// politicians.setOnClickListener(this);
@@ -46,12 +47,15 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 		mypaper.setOnTouchListener(this);
 		newspapers.setOnTouchListener(this);
 		topnews.setOnTouchListener(this);
-
+		Log.i("app", "initialize");
 	}
 
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		Log.i("app", "switch");
+
 		switch (v.getId()) {
+
 		case R.id.tvPoliticians:
 			Intent i = new Intent(Home.this, Neta.class);
 			i.putExtra("activity", "home");
@@ -68,6 +72,11 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 		case R.id.tvMyPaper:
 			Intent i3 = new Intent(Home.this, MyPaper.class);
 			startActivityForResult(i3, 0);
+			break;
+		case R.id.tvDiscussions:
+			Log.i("app", "switch");
+			Intent i4 = new Intent(Home.this, VoteActivity.class);
+			startActivityForResult(i4, 0);
 			break;
 		}
 	}
@@ -133,7 +142,7 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 						R.drawable.style);
 				((TextView) v).setBackgroundDrawable(background);
 				Intent i = new Intent(Home.this, Neta.class);
-				//i.putExtra("activity", "home");
+				// i.putExtra("activity", "home");
 				startActivity(i);
 				break;
 			}
@@ -155,7 +164,7 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 				break;
 			}
 			break;
-			
+
 		case R.id.tvTopNews:
 			switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
@@ -167,12 +176,12 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 				Drawable background = getResources().getDrawable(
 						R.drawable.style);
 				((TextView) v).setBackgroundDrawable(background);
-				//Intent i3 = new Intent(Home.this, MyPaper.class);
-				//startActivityForResult(i3, 0);
+				 Intent i3 = new Intent(Home.this, TopNews.class);
+				 startActivityForResult(i3, 0);
 				break;
 			}
 			break;
-			
+
 		case R.id.tvDiscussions:
 			switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
@@ -184,8 +193,8 @@ public class Home extends Activity implements OnClickListener, OnTouchListener {
 				Drawable background = getResources().getDrawable(
 						R.drawable.style);
 				((TextView) v).setBackgroundDrawable(background);
-			//	Intent i3 = new Intent(Home.this, MyPaper.class);
-				//startActivityForResult(i3, 0);
+				Intent i3 = new Intent(Home.this, VoteActivity.class);
+				startActivityForResult(i3, 0);
 				break;
 			}
 			break;

@@ -130,7 +130,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-                <activity
+        <activity
             android:name=".Neta"
             android:label="Neta" >
             <intent-filter>
@@ -139,10 +139,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-        
-
-        
+        <activity
+            android:name="com.example.electionkhabar.VoteActivity"
+            android:label="Votes" >
+        </activity>
+        <activity
+            android:name="com.example.electionkhabar.TopNews"
+            android:label="Votes" >
+        </activity>
     </application>
 
 </manifest>
